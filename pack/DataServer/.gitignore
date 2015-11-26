@@ -1,0 +1,8 @@
+*.d
+*.o
+*.log
+*~
+Debug/DataServer
+mgprs.py
+*.swp
+/Debug/

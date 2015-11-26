@@ -1,0 +1,8 @@
+*.d
+*.o
+*.log
+*~
+mgprs.py
+*.swp
+/Debug/
+.git

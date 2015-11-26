@@ -1,0 +1,8 @@
+1. 启动 DataServer
+	# 进入 DataServer,
+	# 更改配置信息
+	# ./start.sh
+2. 启动 TransmitServer
+	# 进入 TransmitServer
+	# 更改配置信息
+	# ./start.sh
