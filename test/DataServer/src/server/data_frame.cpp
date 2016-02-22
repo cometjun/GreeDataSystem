@@ -34,7 +34,7 @@ char * data_frame::header() {
 }
 
 uint8_t data_frame::TransMode() {
-	return header_[25];
+	return header_[26];
 }
 /**
  * 返回地址的十六进制表示
@@ -115,7 +115,7 @@ void data_frame::Construct90Response(data_frame& data_) {
 	this->header_[17] = 0x03;	// data length
 	unsigned short checkCode = this->GetCheckCode(&this->header_[9]);
 
-	this->header_[18] = 0x90;
+	this->header_[18] = data_.cmd();
 	this->header_[19] = (checkCode>>8) & 0xFF;
 	this->header_[20] = checkCode & 0xFF;
 	this->header_[21] = this->crc((uint8_t*)&this->header_[2],21-2);

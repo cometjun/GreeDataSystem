@@ -402,13 +402,13 @@ void ClientServer::HandleReceivedData(boost::shared_ptr<data_frame> data) {
 		this->broadcast(clist, data);
 	}
 	// 如果没有客户端在监听，则关闭 gprs
-	if (clist != NULL && clist->clients.empty()) {
-		this->m_gprsMap.erase(gprsAddress);
-		boost::shared_ptr<data_frame> response = boost::shared_ptr<data_frame>(
-				new data_frame());
-		response->Construct92Response(gprsAddress, 1);
-		this->WriteToServerQueue(response);
-	}
+	// if (clist != NULL && clist->clients.empty()) {
+		// this->m_gprsMap.erase(gprsAddress);
+		// boost::shared_ptr<data_frame> response = boost::shared_ptr<data_frame>(
+				// new data_frame());
+		// response->Construct92Response(gprsAddress, 1);
+		// this->WriteToServerQueue(response);
+	// }
 	int gprsMapSize = this->m_gprsMap.size();
 	this->m_gprsMapMutex.unlock();
 	DEBUG(UTIL::IntToString(gprsMapSize).c_str());

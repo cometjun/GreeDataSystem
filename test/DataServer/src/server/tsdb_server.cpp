@@ -294,9 +294,11 @@ void tsdb_server::StartWriteToHdfs(std::string sysIden,
 // 返回将当前队列写入 hdfs 的文件描述符
 boost::shared_ptr<std::ofstream> tsdb_server::GetWriteFile(
 		std::string sysIden) {
+	DEBUG("get write file");
 	//std::string newFileName = server::HDFSReadWrite::GetHdfsFileName();
 	// 如果在同一个时间段，直接返回
 	struct HdfsFileInfo& fileInfo = this->m_writeFileMap[sysIden];
+	DEBUG(server::IntToString(server::tsdb_server::MaxFileSize).c_str());
 	if (fileInfo.writeFile != NULL && fileInfo.bytesWriten < server::tsdb_server::MaxFileSize) {
 		return fileInfo.writeFile;
 	}

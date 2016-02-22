@@ -1,0 +1,22 @@
+文件大小 : 120000000
+局部队列大小 : 100gprs port : 7102
+message server ip: 172.16.201.118
+message server port 5001
+mac : 000C293BA54708
+文件大小 : 120000000
+局部队列大小 : 100gprs port : 7103
+message server ip: 172.16.201.118
+message server port 5001
+mac : 000C293BA54708
+文件大小 : 1000000
+局部队列大小 : 100gprs port : 7103
+message server ip: 172.16.201.118
+message server port 5001
+mac : 000C293BA54708
+terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::system::system_error> >'
+  what():  bind: Address already in use
+文件大小 : 1000000
+局部队列大小 : 100gprs port : 7103
+message server ip: 172.16.201.118
+message server port 5001
+mac : 000C293BA54708
