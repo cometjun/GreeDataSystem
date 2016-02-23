@@ -3,6 +3,4 @@
 *.log
 *~
 Debug/DataServer
-mgprs.py
 *.swp
-/Debug/
