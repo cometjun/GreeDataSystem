@@ -4,12 +4,6 @@ import binascii
 import thread
 import time
 
-def printhex(data):
-        hexstr = ''
-        for i in data:
-		hexstr += ' ' + hex(ord(i))[2:];
-        print(hexstr)
-
 def recvdata(ip,port):
         print("ip : " + ip)
         print("port : " + str(port))
